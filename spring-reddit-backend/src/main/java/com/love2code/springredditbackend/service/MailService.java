@@ -33,6 +33,7 @@ public class MailService {
 		
 		try {
 			Session session = Session.getInstance(properties);
+			session.setDebug(true);
 			MimeMessage message = new MimeMessage(session);
 			  message.setFrom("springreddit@email.com");
 			  message.setRecipients(Message.RecipientType.TO, 
